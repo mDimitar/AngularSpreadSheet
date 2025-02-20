@@ -1,0 +1,12 @@
+    <div [class]="themeClass" class="gridHeight">
+      <ag-grid-angular
+        style="height: 100%"
+        [theme]="theme"
+        [getRowId]="getRowId"
+        [rowData]="rowData"
+        [columnDefs]="colDefs"
+        [defaultColDef]="defaultColDef"
+        [rowGroupPanelShow]="rowGroupPanelShow"
+        [suppressDragLeaveHidesColumns]="true"
+      ></ag-grid-angular>
+    </div>
