@@ -1,2 +1,32 @@
 @import '../node_modules/ag-grid-community/styles/ag-grid.css';
 @import '../node_modules/ag-grid-community/styles/ag-theme-alpine.css';
+
+:root {
+  --layout-grid-header-height: 32px;
+  --layout-grid-margin: 32px;
+}
+
+.gridHeight {
+  height: calc(
+    100vh - var(--layout-grid-header-height) - var(--layout-grid-margin)
+  );
+  margin: var(--layout-grid-margin);
+}
+
+@media screen and (max-width: 720px) {
+  div.ag-theme-quartz,
+  div.ag-theme-quartz-dark {
+    --ag-font-size: 12px;
+    --ag-grid-size: 6px;
+  }
+}
+
+.ag-theme-quartz .ag-cell {
+  border-right: 0.5px solid rgba(204, 204, 204, 0.7); /* Border between columns */
+}
+
+.ag-theme-quartz .ag-header {
+  background-color: #ffc781;
+  color: white;
+}
+
